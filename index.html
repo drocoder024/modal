@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Model</title>
+    <style>
+      .content,
+      .content-2 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      .content-2 {
+        display: none;
+      }
+      #btn {
+        background-color: blue;
+        border: 5px solid;
+        color: white;
+        padding: 10px;
+      }
+      hr {
+        border: 0;
+        clear: both;
+        display: block;
+        width: 96%;
+        background-color: black;
+        height: 1px;
+      }
+      #modal-content {
+        height: 200px;
+        width: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="content">
+      <p>Click on the button below</p>
+
+      <input id="btn" type="button" value="Open Model" />
+    </div>
+    <div class="content-2">
+      <div class="content-wrap">
+        <h1>Modal</h1>
+        <hr style="color: rgb(170, 19, 19)" />
+        <h3>what is a modal</h3>
+        <p id="modal-content">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla
+          obcaecati id quod eos laudantium voluptates non, nam atque tempore
+          maiores provident corporis itaque magni velit, suscipit eaque facere
+          ad! Quos?
+        </p>
+      </div>
+    </div>
+    <script>
+      const button = document.querySelector("#btn");
+      const content1=document.querySelector(".content");
+      const content2=document.querySelector(".content-2");
+
+      const hideAndShow=()=>{
+         content1.style.display="none";
+         content2.style.display="flex";
+      }
+      button.addEventListener("click",hideAndShow);
+      
+    </script>
+  </body>
+</html>
